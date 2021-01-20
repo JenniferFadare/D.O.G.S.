@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS dog_db;
+
+CREATE DATABASE dog_db;
