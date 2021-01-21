@@ -32,13 +32,13 @@ Dog.init(
       allowNull: false,
     },
   },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "dog",
-  }
+  // {
+  //   sequelize,
+  //   timestamps: false,
+  //   freezeTableName: true,
+  //   underscored: true,
+  //   modelName: "dog",
+  // }
 );
 
 module.exports = Dog
