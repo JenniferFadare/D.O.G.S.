@@ -10,7 +10,7 @@ TopDogs.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement,
+      autoIncrement: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -29,13 +29,7 @@ TopDogs.init(
       },
     },
   },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "top_dogs",
-  }
+  
 );
 
 module.exports = TopDogs;
