@@ -51,6 +51,8 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   // check for session
   Dog.create({
+    // // get user id from session (after front end is done)
+    // user_id: req.session.user_id, 
     user_id: req.body.user_id,
     name: req.body.name,
     breed: req.body.breed,
