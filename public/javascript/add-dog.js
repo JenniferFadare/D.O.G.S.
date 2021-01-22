@@ -10,7 +10,7 @@ async function addDogFormHandler(event) {
   const temperament = document.querySelector("#dog-temperament").value.trim();
 
   if (user_id && name && breed && temperament) {
-    const response = await fetch("/dogs", {
+    const response = await fetch("api/dog", {
       method: "post",
       body: {
         user_id,
