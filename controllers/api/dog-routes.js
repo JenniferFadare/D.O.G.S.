@@ -65,6 +65,26 @@ router.post("/", (req, res) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+  Dog.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id
+    },
+  })
+    .then((dbDogData) => {
+      if (!dbDogData[0]) {
+        res.status(404).json({ message: "No Dog found with specified ID!" });
+        return;
+      }
+      res.json(dbDogData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.delete("/:id", (req, res) => {
   Dog.destroy({
     where: {

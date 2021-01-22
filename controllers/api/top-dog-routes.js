@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { TopDogs } = require("../../models");
+const { TopDogs, User, Dog } = require("../../models");
 
 router.get("/:id", (req, res) => {
   TopDogs.findAll({
@@ -30,17 +30,37 @@ router.post("/", (req, res) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+  TopDogs.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((dbDogData) => {
+      if (!dbDogData[0]) {
+        res.status(404).json({ message: "No dog found with specified ID!" });
+        return;
+      }
+      res.json(dbDogData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.delete("/:id", (req, res) => {
   TopDogs.destroy({
     where: {
       id: req.params.id,
     },
   })
-  .then((dbDogData) => res.json(dbDogData))
-  .catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
-  });
-})
+    .then((dbDogData) => res.json(dbDogData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;
