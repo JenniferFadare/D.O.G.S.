@@ -27,7 +27,7 @@ Dog.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    temperment: {
+    temperament: {
       type: DataTypes.STRING,
       allowNull: false,
     },

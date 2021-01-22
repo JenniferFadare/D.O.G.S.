@@ -5,31 +5,31 @@ const dogData = [
         user_id: 1,
         name: 'Seymour', 
         breed: 'Beagle',
-        temperment: 'Happy',
+        temperament: 'Happy',
     },
     {
         user_id: 2,
         name: 'Nibbler',
         breed: 'Alien',
-        temperment: 'Calm',
+        temperament: 'Calm',
     }, 
     {
         user_id: 3,
         name: 'Bingo',
         breed: 'Bulldog',
-        temperment: 'Aggressive',
+        temperament: 'Aggressive',
     },
     {
         user_id: 4,
         name: 'Lady',
         breed: 'King Charles',
-        temperment: 'Calm'
+        temperament: 'Calm'
     },
     {
         user_id: 5,
         name: 'Tramp',
         breed: 'JR Terrier',
-        temperment: 'energetic',
+        temperament: 'energetic',
     },
 ];
 
