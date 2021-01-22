@@ -1,5 +1,3 @@
-const { json } = require("sequelize/types");
-
 async function topDogInputHandler(event) {
   event.preventDefault();
 
