@@ -30,6 +30,6 @@ async function addDogFormHandler(event) {
   }
 }
 
-document
+
   .querySelector(".dog-form")
   .addEventListener("submit", addDogFormHandler);
