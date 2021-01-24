@@ -1,39 +1,49 @@
-const express = require('express');
-const sequelize = require('./config/connection');
-const routes = require('./controllers');
-const exphbs = require('express-handlebars');
+const express = require("express");
+const sequelize = require("./config/connection");
+const routes = require("./controllers");
+const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
 const app = express();
 const PORT = process.env.PORT || 3001;
-const session = require('express-session');
-const path = require('path')
+const session = require("express-session");
+const path = require("path");
+// do some funky stuff with the express server
+// to allow socket.io to listen on the same route as the server
+const server = require("http").createServer(app);
+// allow socket.io to listen on the server
+const io = require("socket.io")(server);
 
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: "Super secret secret",
   cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
+// create socket.io server
+io.on("connection", (socket) => {
+  socket.emit("chat-message", "Welcome to dog chat");
+  socket.on("send-chat-message", (message) => {
+    socket.broadcast.emit('chat-message', message)
+  });
+});
+
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
-  })
-
-
-  
+  server.listen(PORT, () => console.log("Now listening"));
+});
