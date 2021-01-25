@@ -50,7 +50,7 @@ io.on("connection", (socket) => {
     name: "admin",
     message: "Welcome to dog chat!",
   });
-  // set up chat message sender
+  // set up chat message sender brodcasts an object with message and name keys. 
   socket.on("send-chat-message", (message) => {
     socket.broadcast.emit("chat-message", {
       message: message,
