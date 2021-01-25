@@ -12,6 +12,8 @@ const path = require("path");
 const server = require("http").createServer(app);
 // allow socket.io to listen on the server
 const io = require("socket.io")(server);
+// declare users vairable for chat.
+const users = {};
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -38,9 +40,20 @@ app.use(routes);
 
 // create socket.io server
 io.on("connection", (socket) => {
-  socket.emit("chat-message", "Welcome to dog chat");
+  socket.on("new-user", (name) => {
+    users[socket.id] = name;
+    socket.broadcast.emit("user-connected", name);
+  });
+  // socket.emit("chat-message", "Welcome to dog chat");
   socket.on("send-chat-message", (message) => {
-    socket.broadcast.emit('chat-message', message)
+    socket.broadcast.emit("chat-message", {
+      message: message,
+      name: users[socket.id],
+    });
+  });
+  socket.on("disconnect", () => {
+    socket.broadcast.emit('user-disconnected', users[socket.id])
+    delete users[socket.id] 
   });
 });
 
