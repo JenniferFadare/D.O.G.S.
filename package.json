@@ -4,9 +4,8 @@
   "description": "Team 6 project repository for UT bootcamp",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "seed": "node seeds/index.js",
-    "devStart": "nodemon server.js"
+    "start": "nodemon server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",

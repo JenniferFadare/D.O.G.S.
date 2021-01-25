@@ -40,20 +40,27 @@ app.use(routes);
 
 // create socket.io server
 io.on("connection", (socket) => {
+  // send mesage telling other users that someone connected
   socket.on("new-user", (name) => {
     users[socket.id] = name;
     socket.broadcast.emit("user-connected", name);
   });
-  // socket.emit("chat-message", "Welcome to dog chat");
+  // send welcome message once someone connects
+  socket.emit("chat-message", {
+    name: "admin",
+    message: "Welcome to dog chat!",
+  });
+  // set up chat message sender
   socket.on("send-chat-message", (message) => {
     socket.broadcast.emit("chat-message", {
       message: message,
       name: users[socket.id],
     });
   });
+  // send message telling other users that someone disconnected
   socket.on("disconnect", () => {
-    socket.broadcast.emit('user-disconnected', users[socket.id])
-    delete users[socket.id] 
+    socket.broadcast.emit("user-disconnected", users[socket.id]);
+    delete users[socket.id];
   });
 });
 
