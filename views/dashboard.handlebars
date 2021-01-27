@@ -1,0 +1,53 @@
+<h1 id="username">{{user.username}}</h1>
+<div id="user_id" style="display: none;">{{user.id}}</div>
+
+<div class="dog-container">
+  <h2 class="my-dogs"> my dogs: </h2>
+  <ol>
+    {{#each user.my-dogs as |dog|}}
+    <li>
+      <ul>
+        <li>
+          <h3>name: {{dog.name}}</h3>
+        </li>
+        <li>
+          <h3>breed: {{dog.breed}}</h3>
+        </li>
+        <li>
+          <h3>temperament: {{dog.temperament}}</h3>
+        </li>
+      </ul>
+    </li>
+    {{/each}}
+  </ol>
+  <button class="btn edit-dogs-btn">
+    <a href="/dashboard/edit-dogs/{{user.id}}">Edit dogs</a>
+  </button>
+</div>
+
+<div class="top-dog-contianer">
+  <h2>My top dogs:</h2>
+  <ol>
+    {{#each user.top-eight as |top-dog|}}
+    <li>
+      <h3>{{top-dog.name}}</h3>
+    </li>
+    {{/each}}
+  </ol>
+  <button class="btn edit-btn">
+    <a href="dashboard/edit-top-dog/{{user.id}}"> Edit top dogs </a>
+  </button>
+</div>
+
+<div class="chat-container">
+  <h2>Dog chat!</h2>
+  {{!-- chat box --}}
+  <div id="message-container"></div>
+  <form id="send-container">
+    <input type="text" id="message-input">
+    <button type="submit" id="send-button">Send</button>
+  </form>
+</div>
+{{!-- /chat box --}}
+<script defer src="http://localhost:3001/socket.io/socket.io.js"></script>
+<script defer src="javascript/chat-script.js"></script>
