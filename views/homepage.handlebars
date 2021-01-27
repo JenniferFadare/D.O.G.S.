@@ -1,6 +1,25 @@
 <div>You are on the homepage</div>
 
-{{#unless loggedIn}}
+{{#if loggedIn}}
+
+<div class="user-list-container">
+  <ol>
+    <h2>D.O.G.S users:</h2>
+    {{#each users as |user|}}
+    <li>
+      <ul>
+        <li>
+          {{user.username}}
+          <a href="/profiles/{{user.id}}"> dead link to public profile</a>
+        </li>
+      </ul>
+    </li>
+    {{/each}}
+  </ol>
+</div>
+
+
+{{else}}
 <!--Sign Up section-->
 <section class="sign-up">
   <div>
@@ -83,4 +102,4 @@
   </div>
 
 </section>
-{{/unless}}
+{{/if}}
