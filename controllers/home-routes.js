@@ -4,22 +4,12 @@ const sequelize = require("../config/connection");
 
 router.get('/', (req, res) => {
   User.findAll({
-    attributes: { exclude: ['password'] },
-    include: [
-      {
-        model: Dog,
-        as: "my-dogs"
-      },
-      {
-        model: Dog,
-        attributes: ["id", "name"],
-        as: "top-eight"
-      },
-    ]
+    attributes: [ "id", "username" ],
   })
   .then(dbUserData => {
-    res.render('homepage', { dbUserData, loggedIn: req.session.loggedIn })
-    console.log(dbUserData)
+    const user = dbUserData.map((user) => user.get({plain: true }));
+    console.log(user)
+    res.render('homepage', { user, loggedIn: req.session.loggedIn })
   })
   .catch(err => {
     console.log(err);
