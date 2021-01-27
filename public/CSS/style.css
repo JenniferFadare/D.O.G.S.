@@ -1,3 +1,5 @@
+/*MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
 .service-grid-container {
     background: lightyellow;
     width: 80%;
@@ -41,11 +43,9 @@
   }
   
   :root{
-      --primary-color:  #4daa57;
-      --secondary-color: #E7E5E5;
-      --primary-font-color: #024e76;
-      --tertiary-color: #35a7ff;
-      --border-color: #ff101f; 
+      --primary-color: #fce138;
+      --secondary-color: #024e76;
+      --tertiary-color: #39a6b2;
   }
   
   @media screen and (max-width: 980px) {
@@ -408,7 +408,7 @@
       font-size: 48px;
       color: #024e76; 
       border-bottom: 3px solid;
-      padding-bottom: 20px;
+      padding-bottom: 30px;
       text-align: center;
       margin: 0 auto 35px auto;
       width: 50%;   
@@ -711,6 +711,7 @@
       font-size: 200px;
       color: black;
   }
+  
   
   
   
