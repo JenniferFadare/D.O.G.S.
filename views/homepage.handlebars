@@ -1,99 +1,86 @@
 <div>You are on the homepage</div>
 
-    {{#unless loggedIn}}
-    <!--Sign Up section-->
-    <section class="sign-up">
-        <div>
-            <!--Sign Up Form-->
-            <form class="sign-up-form">
-                <h3>Join the Pack!</h3>
-                <br />
-                <label for="email">Enter email address</label>
-                <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" />
+{{#unless loggedIn}}
+<!--Sign Up section-->
+<section class="sign-up">
+  <div>
+    <!--Sign Up Form-->
+    <form class="sign-up-form">
+      <h3>Join the Pack!</h3>
+      <br />
+      <label for="email">Enter email address</label>
+      <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" />
 
-                <label for="name">Pick a username:</label>
-                <input type="text" placeholder="username" name="username" id="username" class="form-input" />
+      <label for="name">Pick a username:</label>
+      <input type="text" placeholder="username" name="username" id="username" class="form-input" />
 
-                <label for="password">Enter a password:</label>
-                <input type="text" placeholder="at least 8 characters" name="password" id="password"
-                    class="form-input" />
+      <label for="password">Enter a password:</label>
+      <input type="text" placeholder="at least 8 characters" name="password" id="password" class="form-input" />
 
-                <button type="submit">
-                    Let's Go!
-                </button>
-            </form>
-        </div>
-    </section>
-    <!--end sign up section-->
+      <button type="submit">
+        Let's Go!
+      </button>
+    </form>
+  </div>
+</section>
+<!--end sign up section-->
 
 
-    <!--"Dog Facts" section"-->
-    <section id="dog-facts" class="intro">
-        <div class="flex-row">
-            <h2 class="section-title secondary-border"> Why Your Dog Needs a Playdate</h2>
-        </div>
+<!--"Dog Facts" section"-->
+<section id="dog-facts" class="intro">
+  <div class="flex-row">
+    <h2 class="section-title secondary-border"> Why Your Dog Needs a Playdate</h2>
+  </div>
 
-        <div class="dog-fact">
-            <h3> Dogs are Pack Animals </h3>
-            <div class="fact-info">
-                <div class="dog-img">
-                    <img src="images/dog-fact-one.jpg" alt="" />
-                </div>
-                <div class="step-text">
-                    <h4>Fill Out the Form Above.</h4>
-                    <p> Your'e already here, so why not?</p>
-                </div>
-            </div>
-        </div>
+  <div class="dog-fact">
+    <h3> Dogs are Pack Animals </h3>
+    <div class="fact-info">
+      <div class="dog-img">
+        <img src="images/dog-fact-one.jpg" alt="" />
+      </div>
+      <div class="step-text">
+        <h4>Fill Out the Form Above.</h4>
+        <p> Your'e already here, so why not?</p>
+      </div>
+    </div>
+  </div>
 
-        <div class="dog-fact">
-            <h3>Dogs Need Exercise</h3>
-            <div class="fact-info">
-                <div class="dog-img">
-                    <img src="images/dog-fact-two" alt="" />
-                </div>
-                <div class="fact-text">
+  <div class="dog-fact">
+    <h3>Dogs Need Exercise</h3>
+    <div class="fact-info">
+      <div class="dog-img">
+        <img src="images/dog-fact-two" alt="" />
+      </div>
+      <div class="fact-text">
 
-                    <p>You need exercise too!</p>
-                </div>
-            </div>
-        </div>
+        <p>You need exercise too!</p>
+      </div>
+    </div>
+  </div>
 
-        <div class="dog-fact">
-            <h3>Dogs Need Socialization</h3>
-            <div class="fact-info">
-                <div class="dog-img">
-                    <img src="images/dog-fact-three.jpg" alt="" />
-                </div>
-                <div class="fact-text">
-                    <p>You should probably get some coffee anyway</p>
-                </div>
-            </div>
-        </div>
+  <div class="dog-fact">
+    <h3>Dogs Need Socialization</h3>
+    <div class="fact-info">
+      <div class="dog-img">
+        <img src="images/dog-fact-three.jpg" alt="" />
+      </div>
+      <div class="fact-text">
+        <p>You should probably get some coffee anyway</p>
+      </div>
+    </div>
+  </div>
 
-        <div class="dog-fact">
-            <h3>Dogs Get Destructive When Lonely</h3>
-            <div class="fact-info">
-                <div class="dog-img">
-                    <img src="images/step-4.svg" alt="" />
-                </div>
-                <div class="fact-text">
-                    <p>Fact about signs of dog destruction.</p>
-                </div>
-            </div>
-        </div>
+  <div class="dog-fact">
+    <h3>Dogs Get Destructive When Lonely</h3>
+    <div class="fact-info">
+      <div class="dog-img">
+        <img src="images/step-4.svg" alt="" />
+      </div>
+      <div class="fact-text">
+        <p>Fact about signs of dog destruction.</p>
+      </div>
+    </div>
+  </div>
 
-    </section>
-    {{/unless}}
-
-<div class="chat-container">
-  {{!-- chat box --}}
-<div id="message-container"></div>
-  <form id="send-container">
-    <input type="text" id="message-input">
-    <button type="submit" id="send-button">Send</button>
-  </form>
-</div>
-{{!-- /chat box --}}
-<script defer src="http://localhost:3001/socket.io/socket.io.js"></script>
-<script defer src="javascript/chat-script.js"></script>
+</section>
+{{/unless}}

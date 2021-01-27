@@ -7,9 +7,8 @@ router.get('/', (req, res) => {
     attributes: [ "id", "username" ],
   })
   .then(dbUserData => {
-    const user = dbUserData.map((user) => user.get({plain: true }));
-    console.log(user)
-    res.render('homepage', { user, loggedIn: req.session.loggedIn })
+    const users = dbUserData.map((users) => users.get({plain: true }));
+    res.render('homepage', { users, loggedIn: req.session.loggedIn })
   })
   .catch(err => {
     console.log(err);

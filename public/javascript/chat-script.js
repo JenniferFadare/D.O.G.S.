@@ -14,7 +14,7 @@ async function usernameGrabber() {
   // const user_id = document.location.toString().split("/")[
   //   window.location.toString().split("/").length - 1
   // ];
-  let user_id = 1;
+  let user_id = document.querySelector("#user_id").innerText;
 
   // fetch the username from the database and call chatStarter with the fetched name
   const response = await fetch(`api/users/${user_id}`, {
@@ -23,8 +23,8 @@ async function usernameGrabber() {
   })
     .then((dbUserData) => dbUserData.json())
     .then((dbUserData) => {
-      const name = dbUserData.username
-      chatStarter(socket, name)
+      const name = dbUserData.username;
+      chatStarter(socket, name);
     })
     .catch((err) => {
       console.log(err);
@@ -72,4 +72,4 @@ messageForm.addEventListener("submit", (event) => {
   messageInput.value = "";
 });
 
-usernameGrabber()
+usernameGrabber();
