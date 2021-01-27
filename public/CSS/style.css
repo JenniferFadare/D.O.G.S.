@@ -33,9 +33,7 @@
       margin: 0;
       font-size: 36px;
       color: var(--default-font-color);
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-     
-      
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);   
   }
   
   header a {
@@ -44,10 +42,8 @@
   }
   
   header nav {
-  
       margin: 7px 0;
   }
-  
   
   header nav ul {
       display: flex;
@@ -71,37 +67,14 @@
       text-shadow: none;   
   }
   
-  footer {
-      padding: 20px 35px;
-      background-color: var(--primary-color);
-      display: flex;
-      justify-content:  space-between;
-      flex-wrap: wrap;
-  }
   
-  footer h2 {
-      
-      color: #024e76;
-      font-size: 30px;
-      margin: 0;
-  }
-  
-  footer div {
-     
-      line-height: 1.5;
-      text-align: right;
-  }
-  
-  footer a {
-      color: #024e76;
-  }
   
   section {
       padding: 60px;
   }
   
-  /*Hero Style Start*/
-  .section-title {
+  /*Sign up section start*/
+  .sign-up {
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -109,27 +82,12 @@
       align-items: flex-start;
       background-attachment: fixed;
       background-position: 80%;
-  
-      
-  }
-  /*Hero Style End*/
-  
-  .hero-cta {
-      width: 65%;
-      text-align: left;
-      margin: 3.5%;
-      color: #fff;
-      font-size: 18px;
-      line-height: 1.2;
   }
   
-  .hero-cta h2 {
-      font-style: italic;
-      font-size: 55px;
-      color: #fce138;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  .sign-up img {
+      height: 350px;
   }
-  
+
   .sign-up-form {
       border: 3px solid #024e76;
       background-color: rgba(252,225,56, 0.8);
@@ -137,19 +95,20 @@
       color: #024e76;
       margin: 3.5%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      border-radius: 15px;  
+      border-radius: 15px; 
+      width: 500px; 
   }
   
-  .hero-form h3 {
+  .sign-up-form h3 {
       font-size: 24px;
       margin: 0;
   }
   
-  .hero-form p {
+  .sign-up-form p {
       margin: 5px 0 15px 0;
   }
   
-  .hero-form label {
+  .sign-up-form label {
       margin: 0 5px;
   }
   
@@ -170,73 +129,13 @@
       outline: none;
   }
   
-  .checkbox-wrapper input, .radio-wrapper input {
-      opacity: 0;
-  }
-  
-  .checkbox-wrapper label, .radio-wrapper label {
-      position: relative;
-      left: 10px;
-      margin: 10px;
-      line-height: 1.6;
-  }
-  
-  .checkbox-wrapper label::before, .radio-wrapper label::before {
-      content: "";
-      height: 20px;
-      width: 20px;
-      background: rgba(255, 255, 255, 0.75);
-      border: 1px solid #024e76;
-      position: absolute;
-      top: -4px;
-      left: -30px;
-  }
-  
-  .radio-wrapper label::after {
-      content: "";
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #024e76;
-      position: absolute;
-      left: -29px;
-      top: -3px;
-      background-image: radial-gradient(circle, #39a6b2, #024e76);
-  }
-  
-  .checkbox-wrapper label::after {
-      content:"";
-      height: 6px;
-      width: 14px;
-      border-left: 2px solid #024e76;
-      border-bottom: 2px solid #024e76;
-      position: absolute;
-      left: -26px;
-      top: 1px;
-      transform: rotate(-58deg);
-  }
-  
-  .checkbox-wrapper input + label::after,
-  .radio-wrapper input + label::after {
-      content: none;
-  }
-  
-  .checkbox-wrapper input:checked + label::after, 
-  .radio-wrapper input:checked + label::after {
-      content:"";
-  }
-  
-  .hero-form button {
+  .sign-up-form button {
       color: #fce138;
       background-color: #024e76;
       border: none;
       padding: 10px 20px;
       font-size: 16px;
       border-radius: 15px;
-  }
-  
-  .steps {
-      background: var(--secondary-color);
   }
   
   .section-title {
@@ -253,73 +152,7 @@
       border-color: var(--tertiary-color);
   }
   
-  .intro p {
-      line-height: 1.7;
-      color: #39a6b2;
-      width: 80%;
-      font-size: 20px;
-      margin: 0 auto;
-      text-align: center;
-  }
-  
-  .step {
-      margin: 50px auto;
-      padding-bottom: 50px;
-      width: 80%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-  
-  }
-  
-  .step:not(:last-child) {
-      border-bottom: 1px solid #39a6b2;
-  }
-  
-  .step h3 {
-      color: #024e76;
-      font-size: 46px;
-      flex: 1 30%;
-  }
-  
-  .step-info {
-      display: flex;
-      flex: 2 70%;
-      flex-wrap: wrap;
-      align-items: center;
-  
-  }
-  
-  .step-img {
-      flex: 1 12%;
-      margin-right: 20px;
-  }
-  
-  .step-img img {
-      max-width: 100%;
-  }
-  
-  .step-text {
-      flex: 12;
-  }
-  
-  .step-text p {
-      color: #39a6b2;
-      font-size: 18px;
-  }
-  
-  .step-text h4 {
-      font-size: 26px;
-      line-height: 1.5;
-      color: #024e76;
-  }
-  
-  .step:last-child {
-      border-bottom: 1px solid #39a6b2;
-  }
-  
-  .trainers {
+  .dog-facts {
       width: 100%;
       margin: 0 auto;
       display: flex;
@@ -327,43 +160,15 @@
       justify-content: space-around;   
   }
   
-  .trainer {
-      
-      margin: 20px;
-      background: rgba(2, 77, 118, 1);
-      color: #fce138;
-      flex: 1;   
-  
-  }
-  
-  .trainer-1 {
-      background-image: url("../images/trainer-1.jpg");
-      background-size: cover;
-      position: relative;
-    
-  }
-  
-  .trainer-2 {
-      background-image: url("../images/trainer-2.jpg");
-      background-size: cover;
-      position: relative;
-  }
-  
-  .trainer-3 {
-      background-image: url("../images/trainer-3.jpg");
-      background-size: cover;
-      position: relative;
-  }
-  
-  .trainer-img {
-      width: 100%;
-      min-height: 300px;
+  .dog-img {
+      max-width: 600px;
+      max-height: 300px;
       display: flex;
       align-items: flex-end;
       overflow: hidden;
   }
   
-  .trainer-img h3 {
+  .dog-img h3 {
       position: relative;
       font-size: 28px;
       z-index: 55;
@@ -373,7 +178,7 @@
       transition: .5s;
   }
   
-  .trainer-img h4 {
+  .dog-img h4 {
       position: relative;
       font-size: 22px;
       z-index: 55;
@@ -382,42 +187,12 @@
       transition: .5s;
   }
   
-  .trainer-img::after {
-      content:"";
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(rgba(252, 225, 56, .3) 10%, rgba(2, 78,118, 1) 90%);
-      position: absolute;
-      top: 0;
-      left: 0;  
-      opacity: 0;
-      transition: all .5s;
-  }
-  
-  .trainer:hover .trainer-img::after {
-      opacity: 1;
-  }
-  
-  .trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
-      top: 0px;
-  }
-  
-  
-  .trainer-bio {
+  .dog-fact {
       padding: 25px;
       line-height: 1.3;
   }
-  
-  .trainer-bio h3 {
-      font-size: 28px;  
-  }
-  
-  .trainer-bio h4 {
-      font-weight: lighter;
-      font-size:22px;  
-  }
-  
-  .trainer-bio p {
+
+  .fact-info {
       font-size: 17px;
       
   }
@@ -530,58 +305,35 @@
   }
   
   div {
-      color: purple;
-      font-size: 20px;
-      transition-duration: 2s;
-      
+      color: var(--default-font-color);
+      font-size: 20px;  
   }
-  
-  /*MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 
-.service-grid-container {
-    background: lightyellow;
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr repeat(2, 4fr);
-    grid-template-rows: repeat(5, 1fr) 2fr;
-    border: 2px solid #024e76;
+  footer {
+    padding: 20px 35px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content:  space-between;
+    flex-wrap: wrap;
+}
+
+footer h2 {
+    
     color: #024e76;
-    font-size: 1.2rem;
-  }
-  
-  .service-grid-item {
-  
-     padding: 15px 0;
-     border: 2px solid #024e76;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-  }
-  
-  .service-grid-item.basic {
-      grid-column: 2 / span 1;
-  }
-  
-  .service-grid-item.both {
-      grid-column: 2/ span 2;
-  }
-  
-  .service-grid-item.cancel {
-      writing-mode: vertical-lr;
-      transform: rotate(180deg);
-      grid-column: 1;
-      grid-row: 1 / -1;
-  
-  }
-  
-  .grid-head, .grid-price, .service-grid-item.cancel {
-      font-size: 1.5rem;
-      font-weight: bold;
-  }
-  
+    font-size: 30px;
+    margin: 0;
+}
 
+footer div {
+   
+    line-height: 1.5;
+    text-align: right;
+}
 
+footer a {
+    color: #024e76;
+}
+  
     /* MEDIA QUERY FOR TABLETS AND SMALLER */
   
   @media screen and (max-width: 980px) {
