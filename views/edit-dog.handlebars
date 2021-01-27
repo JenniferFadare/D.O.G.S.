@@ -1,0 +1,41 @@
+<h1>add dog</h1>
+
+<form class="dog-form">
+  <label for="dog-name"> Dog name </label>
+  <input type="text" id="dog-name">
+
+  <label for="dog-breed"> Dog breed </label>
+  <input type="text" id="dog-breed">
+
+  <label for="dog-temperament"> Dog temperament</label>
+  <input type="text" id="dog-temperament">
+
+  <button type="submit"> Submit </button>
+
+</form>
+
+{{!-- <h1>edit dog</h1>
+<form class="edit-dog-form"></form>
+
+<h2>my dogs:</h2> --}}
+
+<ol>
+  {{#each user.my-dogs as |dogs|}}
+  <li>
+    <ul>
+      <li>
+        name: {{dogs.name}}
+      </li>
+      <li>
+        breed: {{dogs.breed}}
+      </li>
+      <li>
+        temperament: {{dogs.temperament}}
+      </li>
+    </ul>
+  </li>
+  {{/each}}
+</ol>
+
+
+<script src="/javascript/add-dog.js"></script>
