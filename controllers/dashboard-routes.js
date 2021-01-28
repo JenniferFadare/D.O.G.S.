@@ -66,25 +66,14 @@ router.get("/edit-dogs/:id", (req, res) => {
 
 router.get("/edit-top-dog/:id", (req, res) => {
   
-  User.findOne({
-    where: {
-      id: req.params.id,
-    },
-    attributes: { exclude: ["password"] },
-    include: [
-      {
-        model: Dog,
-        attributes: ["id", "name"],
-        as: "top-eight",
-      },
-    ],
+  Dog.findAll({
+
   })
-    .then((dbUserData) => {
-      const user = dbUserData.get({ plain: true });
-      console.log(user);
-      // const user = dbUserData.get({ plain: true })
-      // console.log(user)
-      res.render("edit-top-dog", { user, loggedIn: req.session.loggedIn });
+    .then((dbDogData) => {
+      const dogs = dbDogData.map((dog) => dog.get({ plain: true }));
+      console.log(dogs);
+
+      res.render("edit-top-dog", { dogs, userId: req.params.id, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);
