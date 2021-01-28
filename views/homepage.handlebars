@@ -24,22 +24,26 @@
 <section class="sign-up">
   <div>
     <!--Sign Up Form-->
-    <form class="sign-up-form">
+    <form class="signup-form">
       <h3>Join the Pack!</h3>
       <br />
       <label for="email">Enter email address</label>
-      <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" />
+      <input type="email" placeholder="Email Address" name="email" id="email-signup" class="form-input" />
 
       <label for="name">Pick a username:</label>
-      <input type="text" placeholder="username" name="username" id="username" class="form-input" />
+      <input type="text" placeholder="username" name="username" id="username-signup" class="form-input" />
 
       <label for="password">Enter a password:</label>
-      <input type="text" placeholder="at least 8 characters" name="password" id="password" class="form-input" />
+      <input type="password" placeholder="at least 8 characters" name="password" id="password-signup" class="form-input" />
+
+      <label for="city">Enter a city:</label>
+      <input type="text" placeholder="city" name="city-signup" id="city-signup" class="form-input" />
 
       <button type="submit">
         Let's Go!
       </button>
     </form>
+    <script defer src="/javascript/signup.js"></script>
   </div>
 </section>
 <!--end sign up section-->
