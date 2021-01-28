@@ -67,8 +67,6 @@
       text-shadow: none;   
   }
   
-  
-  
   section {
       padding: 60px;
   }
@@ -88,7 +86,7 @@
       height: 350px;
   }
 
-  .sign-up-form {
+  .signup-form {
       border: 3px solid #024e76;
       background-color: rgba(252,225,56, 0.8);
       padding: 20px;
