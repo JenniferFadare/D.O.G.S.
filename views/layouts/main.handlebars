@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D.O.G.S</title>
@@ -27,9 +27,11 @@
                     <a href="/login">Login</a>
                     {{/if}}
                 </li>
+                {{#unless loggedIn}}
                 <li>
                     <a href="#dog-facts">Dog Facts</a>
                 </li>
+                {{/unless}}
                 <li>
                     <a href="#our-mission">Our Mission</a>
                 </li>
