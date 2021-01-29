@@ -1,5 +1,5 @@
 // connect to the project, will need to be updated to
-const socket = io(`${document.location.href}`);
+const socket = io();
 // grab DOM elements for chat
 const messageContainer = document.querySelector("#message-container");
 const messageForm = document.querySelector("#send-container");
