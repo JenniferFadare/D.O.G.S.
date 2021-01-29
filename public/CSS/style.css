@@ -86,7 +86,7 @@
       height: 350px;
   }
 
-  .signup-form {
+  .form {
       border: 3px solid #024e76;
       background-color: rgba(252,225,56, 0.8);
       padding: 20px;
@@ -97,16 +97,16 @@
       width: 500px; 
   }
   
-  .sign-up-form h3 {
+  .form h3 {
       font-size: 24px;
       margin: 0;
   }
   
-  .sign-up-form p {
+  .form p {
       margin: 5px 0 15px 0;
   }
   
-  .sign-up-form label {
+  .form label {
       margin: 0 5px;
   }
   
@@ -127,7 +127,7 @@
       outline: none;
   }
   
-  .sign-up-form button {
+  .form button {
       color: #fce138;
       background-color: #024e76;
       border: none;
