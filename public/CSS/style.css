@@ -15,7 +15,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--default-font-color);
   background-color: var(--secondary-color);
-  text:var(--default-font-color)
 }
 
 header {
@@ -324,6 +323,12 @@ footer div {
 
 footer a {
   color: #024e76;
+}
+
+/*Dashboard design */
+
+.dog-container {
+    text-align: center;
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
