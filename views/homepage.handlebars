@@ -1,4 +1,4 @@
-<div>You are on the homepage</div>
+<!--<div>You are on the homepage</div>-->
 
 {{#if loggedIn}}
 
@@ -24,7 +24,7 @@
 <section class="sign-up">
   <div>
     <!--Sign Up Form-->
-    <form class="signup-form">
+    <form class="signup-form form">
       <h3>Join the Pack!</h3>
       <br />
       <label for="email">Enter email address</label>
@@ -48,62 +48,107 @@
 </section>
 <!--end sign up section-->
 
-
 <!--"Dog Facts" section"-->
-<section id="dog-facts" class="intro">
+<section id="dog-facts">
   <div class="flex-row">
     <h2 class="section-title secondary-border"> Why Your Dog Needs a Playdate</h2>
   </div>
-
-  <div class="dog-fact">
-    <h3> Dogs are Pack Animals </h3>
-    <div class="fact-info">
-      <div class="dog-img">
-        <img src="images/dog-fact-one.jpg" alt="" />
-      </div>
-      <div class="step-text">
-        <h4>Fill Out the Form Above.</h4>
-        <p> Your'e already here, so why not?</p>
-      </div>
-    </div>
+<!-- Dog Fact 1 -->
+  <article class="dog-fact">
+  <div> <img src="images/dog-fact-one.jpg" alt="" />
   </div>
+  <div class="fact-text">
+    <h3>Dogs Are Pack Animals</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis qui mollitia esse laudantium officiis, amet perferendis adipisci eaque incidunt tempore deleniti quasi ad sed quam saepe doloremque sint iste!
+    </p>
+  </div>  
+ </article>
 
-  <div class="dog-fact">
+<!-- Dog Fact 2 -->
+
+ <article class="dog-fact">
+  <div> <img src="images/dog-fact-two.jpg" alt="" />
+  </div>
+  <div class="fact-text">
     <h3>Dogs Need Exercise</h3>
-    <div class="fact-info">
-      <div class="dog-img">
-        <img src="images/dog-fact-two" alt="" />
-      </div>
-      <div class="fact-text">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis qui mollitia esse laudantium officiis, amet perferendis adipisci eaque incidunt tempore deleniti quasi ad sed quam saepe doloremque sint iste!
+    </p>
+  </div>  
+ </article>
 
-        <p>You need exercise too!</p>
-      </div>
-    </div>
+<!-- Dog Fact 3 -->
+ <article class="dog-fact">
+  <div> <img src="images/dog-fact-three.jpg" alt="" />
   </div>
-
-  <div class="dog-fact">
+  <div class="fact-text">
     <h3>Dogs Need Socialization</h3>
-    <div class="fact-info">
-      <div class="dog-img">
-        <img src="images/dog-fact-three.jpg" alt="" />
-      </div>
-      <div class="fact-text">
-        <p>You should probably get some coffee anyway</p>
-      </div>
-    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis qui mollitia esse laudantium officiis, amet perferendis adipisci eaque incidunt tempore deleniti quasi ad sed quam saepe doloremque sint iste!
+    </p>
+  </div>  
+ </article>
+<!-- Dog Fact 4 -->
+  <article class="dog-fact">
+  <div> <img src="images/dog-fact-four.jpg" alt="" />
   </div>
-
-  <div class="dog-fact">
+  <div class="fact-text">
     <h3>Dogs Get Destructive When Lonely</h3>
-    <div class="fact-info">
-      <div class="dog-img">
-        <img src="images/step-4.svg" alt="" />
-      </div>
-      <div class="fact-text">
-        <p>Fact about signs of dog destruction.</p>
-      </div>
-    </div>
-  </div>
-
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis qui mollitia esse laudantium officiis, amet perferendis adipisci eaque incidunt tempore deleniti quasi ad sed quam saepe doloremque sint iste!
+    </p>
+  </div>  
+ </article>
 </section>
+
+<section id="our-mission">
+        <div class="flex-row">
+            <h2 class="section-title primary-border">Our Mission</h2>
+        </div>
+        <div>
+            <p>D.O.G.S. was founded to help owners find a play mate for their 'fur babies'
+                so that they can spend less time inside looking sad and more time finding 
+                interaction in the world they live in.  
+            </p>
+        </div>
+    </section>
+<!-- insert common page entries below this if statement -->   
 {{/if}}
+<section id="reach-out" class="contact">
+        <div class="flex-row">
+            <h2 class="section-title secondary-border">Reach Out</h2>
+        </div>
+        <br />
+        <div class="contact-info">
+            <div>
+                <h3>D.O.G.S.</h3>
+                <p>Any questions or concerns before signing up?
+                    <br />
+                    Let us know and we'll be happy to talk to you!
+                </p>
+                <address>
+                    55 Main Street <br />
+                    Gonzales, LA <br />
+                    70737<br />
+                    P: 555.DOG.LOVE (555.)<br />
+                    E: <a href="mailto:info@dogsocial.io">info@dogsocial.io</a>
+                </address>
+            </div>
+
+            <div class="contact-form">
+                <h3> Contact Us</h3>
+                <form>
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" placeholder="Your Name" />
+
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message"> "Message"</textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13666.369085721442!2d-97.7134076669876!3d31.093266604205333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86454bdbc5dce419%3A0xc4aceff8a85e53cf!2s3401%20Beagle%20Ct%2C%20Killeen%2C%20TX%2076543!5e0!3m2!1sen!2sus!4v1601174518060!5m2!1sen!2sus"
+                    frameborder="0" style="border:0;" allowfullscreen="">
+                </iframe>
+            </div>
+        </div>
+    </section>

@@ -1,38 +1,43 @@
-<h1>add dog</h1>
+<section class="sign-up">
+  <h1>add dog</h1>
+  <form class="dog-form form">
+    <label for="dog-name"> Dog name </label>
+    <input class="form-input" type="text" id="dog-name">
 
-<form class="dog-form">
-  <label for="dog-name"> Dog name </label>
-  <input type="text" id="dog-name">
+    <label for="dog-breed"> Dog breed </label>
+    <input class="form-input" type="text" id="dog-breed">
 
-  <label for="dog-breed"> Dog breed </label>
-  <input type="text" id="dog-breed">
+    <label for="dog-temperament"> Dog temperament</label>
+    <input class="form-input" type="text" id="dog-temperament">
 
-  <label for="dog-temperament"> Dog temperament</label>
-  <input type="text" id="dog-temperament">
+    <button type="submit"> Submit </button>
+  </form>
+</section>
 
-  <button type="submit"> Submit </button>
-</form>
 
-<h1>edit dog</h1>
-<form class="edit-dog-form">
-  <label for="edit-dog-id">Choose which dog to edit</label>
-  <select name="dog-id" id="edit-dog-id">
-    {{#each user.my-dogs as |dog|}}
-    <option value="{{dog.id}}">{{dog.name}}</option>
-    {{/each}}
-  </select>
+<section class="sign-up">
+  <h1>edit dog</h1>
+  <form class="edit-dog-form form">
+    <label for="edit-dog-id">Choose which dog to edit</label>
+    <select class="form-input" name="dog-id" id="edit-dog-id">
+      {{#each user.my-dogs as |dog|}}
+      <option value="{{dog.id}}">{{dog.name}}</option>
+      {{/each}}
+    </select>
 
-  <label for="edit-dog-name">Dog name</label>
-  <input type="text" id="edit-dog-name">
+    <label for="edit-dog-name">Dog name</label>
+    <input class="form-input" type="text" id="edit-dog-name">
 
-  <label for="edit-dog-breed">Dog breed</label>
-  <input type="text" id="edit-dog-breed">
+    <label for="edit-dog-breed">Dog breed</label>
+    <input class="form-input" type="text" id="edit-dog-breed">
 
-  <label for="edit-dog-temperament">Dog temperament</label>
-  <input type="text" id="edit-dog-temperament">
+    <label for="edit-dog-temperament">Dog temperament</label>
+    <input class="form-input" type="text" id="edit-dog-temperament">
 
-  <button type="submit"> Submit </button>
-</form>
+    <button type="submit"> Submit </button>
+  </form>
+</section>
+
 <h2>my dogs:</h2>
 
 <ol>
@@ -52,7 +57,8 @@
   </li>
   {{/each}}
 </ol>
-
+</section>
 
 <script defer src="/javascript/add-dog.js"></script>
 <script defer src="/javascript/edit-dog.js"></script>
+

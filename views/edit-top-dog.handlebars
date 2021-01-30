@@ -1,0 +1,16 @@
+<section class="sign-up">
+  <h1>add top dogs</h1>
+  <div class="">
+    <form class="top-dog-form form">
+      <h1 id="user-id" style="display: none;">{{userId}}</h1>
+      <select class="form-input" name="dog-id" id="top-dog-picker">
+        {{#each dogs as |dog|}}
+        <option value="{{dog.id}}">{{dog.name}}</option>
+        {{/each}}
+      </select>
+      <button type="submit"> Submit</button>
+    </form>
+  </div>
+</section>
+
+<script src="/javascript/add-top-dog.js"></script>
