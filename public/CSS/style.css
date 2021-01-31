@@ -60,6 +60,21 @@ header nav ul {
     outline: inherit;
   }
 
+.user-list-container {
+  padding: 20px;
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+}
+
+.user-list-container li {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
 header nav ul li a,
 header nav li button {
   padding: 10px 15px;
