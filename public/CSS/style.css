@@ -107,6 +107,10 @@ section {
   background-attachment: fixed;
   background-position: 80%;
 }
+.sign-up h1, h2{
+    flex: 100%;
+    text-align: center;
+}
 
 .sign-up img {
   height: 350px;
