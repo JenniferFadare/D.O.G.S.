@@ -39,26 +39,27 @@
 </section>
 
 <h2>my dogs:</h2>
+<div class="dog-container">
+  <ol>
+    {{#each user.my-dogs as |dogs|}}
+    <li>
+      <ul>
+        <li>
+          name: {{dogs.name}}
+        </li>
+        <li>
+          breed: {{dogs.breed}}
+        </li>
+        <li>
+          temperament: {{dogs.temperament}}
+        </li>
+      </ul>
+    </li>
+    {{/each}}
+  </ol>
+</div>
 
-<ol>
-  {{#each user.my-dogs as |dogs|}}
-  <li>
-    <ul>
-      <li>
-        name: {{dogs.name}}
-      </li>
-      <li>
-        breed: {{dogs.breed}}
-      </li>
-      <li>
-        temperament: {{dogs.temperament}}
-      </li>
-    </ul>
-  </li>
-  {{/each}}
-</ol>
 </section>
 
 <script defer src="/javascript/add-dog.js"></script>
 <script defer src="/javascript/edit-dog.js"></script>
-

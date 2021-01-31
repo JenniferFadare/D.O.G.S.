@@ -60,17 +60,16 @@ header nav ul {
     outline: inherit;
   }
 
-.user-list-container {
+.user-list-container, .dog-container, .top-dog-container {
   padding: 20px;
   display: flex;
   flex-direction:column;
   text-align: center;
   width: max-content;
   margin: 0 auto;
-  
 }
 
-.user-list-container li {
+.user-list-container li, .dog-container li, .top-dog-container li {
   background: #ffffff;
   margin: 0;
   padding: 0;
@@ -155,13 +154,18 @@ section {
   outline: none;
 }
 
-.form button {
+.form button, .btn{
   color: #fce138;
   background-color: #024e76;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 15px;
+}
+
+.btn a {
+    color: #fce138;
+    text-decoration: none;
 }
 
 .section-title {
@@ -345,8 +349,11 @@ footer a {
 
 /*Dashboard design */
 
+.username-container {
+    display: flex;
+    justify-content: center;
+}
 #username {
-  display: flex;
   background-image: url("../images/default-profile-pic.jpg"); 
   background-size: contain;
   height: 300px;
