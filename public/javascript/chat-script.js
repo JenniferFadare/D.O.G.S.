@@ -33,29 +33,34 @@ async function usernameGrabber() {
 
 async function chatStarter(socket, name) {
   // send message to user when they log in showing their username in dog chat
-  appendMessage(`You joined as '${name}'`);
+  appendMessage(`You joined as '${name}'`, false);
   socket.emit("new-user", name);
 
   // set up chat message for socket send object as 'username: message'
   socket.on("chat-message", (data) => {
-    appendMessage(`${data.name} : ${data.message}`);
+    appendMessage(`${data.name} : ${data.message}`, false);
   });
 
   // set up user connected message displaying username of new connection to all other memebers
   socket.on("user-connected", (name) => {
-    appendMessage(`${name} connected`);
+    appendMessage(`${name} connected`, false);
   });
 
   // set up user disconnected message displaying username of new diconnect to all other users
   socket.on("user-disconnected", (name) => {
-    appendMessage(`${name} disconnected`);
+    appendMessage(`${name} disconnected`, false);
   });
 }
 
 // helper function to add a message into the chat box
-function appendMessage(message) {
+function appendMessage(message, isSelf) {
   const messageElement = document.createElement("div");
   messageElement.innerText = message;
+
+  if (isSelf) {
+    messageElement.className = "message-right"
+  }
+
   messageContainer.append(messageElement);
 }
 
@@ -65,7 +70,7 @@ messageForm.addEventListener("submit", (event) => {
   // grab the value of the message field
   const message = messageInput.value;
   // display message on the senders screen
-  appendMessage(`you: ${message}`);
+  appendMessage(`you: ${message}`, true);
   // send the message data to the socket.io server
   socket.emit("send-chat-message", message);
   // reset the message box after you send the message
