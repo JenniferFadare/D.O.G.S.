@@ -7,6 +7,7 @@
     {{#each user.my-dogs as |dog|}}
     <li>
       <ul>
+        <sec id="dog"></sec>
         <li>
           <h3>Name: {{dog.name}}</h3>
         </li>
@@ -54,3 +55,4 @@
 {{!-- /chat box --}}
 <script defer src="https://murmuring-taiga-40351.herokuapp.com/socket.io/socket.io.js"></script>
 <script defer src="javascript/chat-script.js"></script>
+<script defer src="javascript/dog-photo.js"></script>

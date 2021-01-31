@@ -21,7 +21,7 @@ async function editDogFormHandler(event) {
 
     if (response.ok) {
       console.log("success");
-      document.location.reload();
+      document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
     }
