@@ -345,6 +345,19 @@ footer a {
 
 /*Dashboard design */
 
+#username {
+  display: flex;
+  background-image: url("../images/default-profile-pic.jpg"); 
+  background-size: contain;
+  height: 300px;
+  width: 500px;
+  background-repeat: no-repeat;
+}
+
+#username h1 {
+  background-color: var(--secondary-color);
+  flex-wrap: wrap;
+}
 .dog-container {
     text-align: center;
 }
