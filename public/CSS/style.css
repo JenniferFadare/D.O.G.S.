@@ -352,6 +352,7 @@ footer a {
 .username-container {
     display: flex;
     justify-content: center;
+    margin-top: 3vh;
 }
 #username {
   background-image: url("../images/default-profile-pic.jpg"); 
