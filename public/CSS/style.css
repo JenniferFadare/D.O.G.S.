@@ -65,6 +65,8 @@ header nav ul {
   display: flex;
   flex-direction:column;
   text-align: center;
+  width: max-content;
+  
 }
 
 .user-list-container li {
