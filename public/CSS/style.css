@@ -19,7 +19,9 @@ body {
 
 header {
   padding: 20px 35px;
-  background-color: var(--primary-color);
+  background-image: url(../images/grass-header.jpg);
+  background-size: contain;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
