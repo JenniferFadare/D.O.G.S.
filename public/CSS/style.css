@@ -351,6 +351,29 @@ footer a {
   color: #024e76;
 }
 
+/* Chat box styles beign */
+
+.chat-container {
+    margin: 6px auto;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    flex-direction: column;
+    width: 350px;
+}
+
+#message-container div {
+    background-color: var(--secondary-color);
+    margin: 3px 0;
+    border-radius: 30px;
+    padding: 0 8px;
+}
+
+.message-right {
+    background-color: var(--primary-color) !important;
+    text-align: right;
+}
+
 /*Dashboard design */
 
 .username-container {
@@ -370,6 +393,7 @@ footer a {
   background-color: var(--secondary-color);
   flex-wrap: wrap;
 }
+
 .dog-container {
     text-align: center;
 }
