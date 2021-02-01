@@ -377,7 +377,7 @@ footer a {
 }
 
 .message-right {
-    background-color: var(--primary-color) !important;
+    background-color: var(--tertiary-color) !important;
     text-align: right;
 }
 
