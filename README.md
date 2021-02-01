@@ -25,10 +25,10 @@
   To test type Visit our website to use the application. into the terminal
 
   ## Github: 
-  Check out more project on my Github at https://github.com/JenniferFadare/Team6_Project.git or our depoloyed application https://murmuring-taiga-40351.herokuapp.com/
+  Check out more project on my Github at https://github.com/JenniferFadare/D.O.G.S..git  or our depoloyed application https://murmuring-taiga-40351.herokuapp.com/
 
   ## Email Address:
-  If you have any question please feel free to email me at peters0470@gmail.com, caseyderiso@gmail.com, 
+  If you have any question please feel free to email me at peters0470@gmail.com, caseyderiso@gmail.com
 
   ## Contributors:
   Casey Deriso, Ryan Peters, Jennifer Fadare, Sarah McNeel
