@@ -1,8 +1,10 @@
+<div class="username-container">
 <h1 id="username">{{user.username}}</h1>
+</div>
 <div id="user_id" style="display: none;">{{user.id}}</div>
 
 <div class="dog-container">
-  <h2 class="my-dogs"> my dogs: </h2>
+  <h2 class="my-dogs"> My dogs: </h2>
   <ol>
     {{#each user.my-dogs as |dog|}}
     <li>
@@ -22,7 +24,7 @@
   </ol>
 </div>
 
-<div class="top-dog-contianer">
+<div class="top-dog-container">
   <h2>My top dogs:</h2>
   <ol>
     {{#each user.top-eight as |top-dog|}}

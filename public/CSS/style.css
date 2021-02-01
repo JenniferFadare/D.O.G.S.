@@ -64,17 +64,16 @@ header nav ul {
     outline: inherit;
   }
 
-.user-list-container {
+.user-list-container, .dog-container, .top-dog-container {
   padding: 20px;
   display: flex;
   flex-direction:column;
   text-align: center;
   width: max-content;
   margin: 0 auto;
-  
 }
 
-.user-list-container li {
+.user-list-container li, .dog-container li, .top-dog-container li {
   background: #ffffff;
   margin: 0;
   padding: 0;
@@ -111,6 +110,10 @@ section {
   align-items: flex-start;
   background-attachment: fixed;
   background-position: 80%;
+}
+.sign-up h1, h2{
+    flex: 100%;
+    text-align: center;
 }
 
 .sign-up img {
@@ -159,13 +162,21 @@ section {
   outline: none;
 }
 
-.form button {
+
+.form button, .btn {
   color: var(--default-font-color);
   background-color: var(--tertiary-color);
+
+  
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 15px;
+}
+
+.btn a {
+    color: #fce138;
+    text-decoration: none;
 }
 
 .section-title {
@@ -347,10 +358,37 @@ footer a {
   color: var(--tertiary-color);
 }
 
+/* Chat box styles beign */
+
+.chat-container {
+    margin: 6px auto;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    flex-direction: column;
+    width: 350px;
+}
+
+#message-container div {
+    background-color: var(--secondary-color);
+    margin: 3px 0;
+    border-radius: 30px;
+    padding: 0 8px;
+}
+
+.message-right {
+    background-color: var(--tertiary-color) !important;
+    text-align: right;
+}
+
 /*Dashboard design */
 
+.username-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+}
 #username {
-  display: flex;
   background-image: url("../images/default-profile-pic.jpg"); 
   background-size: contain;
   height: 300px;
@@ -362,6 +400,7 @@ footer a {
   background-color: var(--secondary-color);
   flex-wrap: wrap;
 }
+
 .dog-container {
     text-align: center;
 }
