@@ -11,7 +11,7 @@
     <!-- navigation -->
     <header>
         <h1>
-            <a href="/">D.O.G.S.</a>
+            <a href="/" id="logo">D.O.G.S.</a>
         </h1>
         <nav>
             <!--Unordered list element-->
@@ -20,7 +20,7 @@
                 <li>
                     {{#if loggedIn }}
                     <a href="/dashboard">Dashboard</a>
-                    <button id="logout" class="btn-no-style">Logout</button>
+                    <a id="logout">Logout</a>
                     <script defer src="/javascript/logout.js"></script>
                     {{else}}
                     <!-- Anchor element -->

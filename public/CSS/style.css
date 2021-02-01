@@ -5,40 +5,43 @@
 }
 
 :root {
-  --primary-color: #4daa57;
+  --primary-color: #467733;
   --secondary-color: #e7e5e5;
-  --tertiary-color: #35a7ff;
+  --tertiary-color: #ABFF43;
   --default-font-color: #102542;
+
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--default-font-color);
   background-color: var(--secondary-color);
-  text:var(--default-font-color)
 }
 
 header {
   padding: 20px 35px;
-  background-color: var(--primary-color);
+  background-image: url(../images/grass-header.jpg);
+  background-size: contain;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   top: 0;
   z-index: 9999;
+  box-shadow: var(--tertiary-color);
 }
 
 header h1 {
   font-weight: bold;
   margin: 0;
   font-size: 36px;
-  color: var(--default-font-color);
+  color: var(--tertiary-color);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
   text-decoration: none;
-  color: var(--default-font-color);
+  color: var(--tertiary-color);
 }
 
 header nav {
@@ -60,6 +63,23 @@ header nav ul {
     cursor: pointer;
     outline: inherit;
   }
+
+.user-list-container, .dog-container, .top-dog-container {
+  padding: 20px;
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.user-list-container li, .dog-container li, .top-dog-container li {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
 
 header nav ul li a,
 header nav li button {
@@ -91,16 +111,20 @@ section {
   background-attachment: fixed;
   background-position: 80%;
 }
+.sign-up h1, h2{
+    flex: 100%;
+    text-align: center;
+}
 
 .sign-up img {
   height: 350px;
 }
 
 .form {
-  border: 3px solid #024e76;
-  background-color: rgba(252, 225, 56, 0.8);
+  border: 3px solid var(--default-font-color);
+  background-color: var(--primary-color);
   padding: 20px;
-  color: #024e76;
+  color: var(--default-font-color);
   margin: 3.5%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
@@ -122,11 +146,11 @@ section {
 }
 
 .form-input {
-  border: 1px solid #024e76;
+  border: 1px solid var(--default-font-color);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--default-font-color);
   width: 100%;
   margin-bottom: 15px;
   border-radius: 15px;
@@ -138,19 +162,27 @@ section {
   outline: none;
 }
 
-.form button {
-  color: #fce138;
-  background-color: #024e76;
+
+.form button, .btn {
+  color: var(--default-font-color);
+  background-color: var(--tertiary-color);
+
+  
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 15px;
 }
 
+.btn a {
+    color: #fce138;
+    text-decoration: none;
+}
+
 .section-title {
   font-size: 48px;
   color: var(--default-font-color);
-  border-bottom: 3px solid;
+  border-bottom: 3px solid; 
   padding-bottom: 30px;
   text-align: center;
   margin: 0 auto 35px auto;
@@ -254,11 +286,11 @@ img {
 
 .contact-form input,
 .contact-form textarea {
-  border: 1px solid #024e76;
+  border: 1px solid var(--default-font-color);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--default-font-color);
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
@@ -275,8 +307,8 @@ img {
 .contact-form button {
   width: 100%;
   border: none;
-  background: #024e76;
-  color: #fce138;
+  background: var(--default-font-color);
+  color: var(--tertiary-color);
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
@@ -294,8 +326,8 @@ img {
 /* SERVICE STYLES BEGIN */
 
 .contact-form button:hover {
-  color: #fce138;
-  background: #39a6b2;
+  color: var(--default-font-color);
+  background: var(--tertiary-color);
 }
 
 div {
@@ -312,7 +344,7 @@ footer {
 }
 
 footer h2 {
-  color: var(--default-font-color);
+  color: var(--tertiary-color);
   font-size: 30px;
   margin: 0;
 }
@@ -323,7 +355,54 @@ footer div {
 }
 
 footer a {
-  color: #024e76;
+  color: var(--tertiary-color);
+}
+
+/* Chat box styles beign */
+
+.chat-container {
+    margin: 6px auto;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    flex-direction: column;
+    width: 350px;
+}
+
+#message-container div {
+    background-color: var(--secondary-color);
+    margin: 3px 0;
+    border-radius: 30px;
+    padding: 0 8px;
+}
+
+.message-right {
+    background-color: var(--tertiary-color) !important;
+    text-align: right;
+}
+
+/*Dashboard design */
+
+.username-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#username {
+  background-image: url("../images/default-profile-pic.jpg"); 
+  background-size: contain;
+  height: 300px;
+  width: 500px;
+  background-repeat: no-repeat;
+}
+
+#username h1 {
+  background-color: var(--secondary-color);
+  flex-wrap: wrap;
+}
+
+.dog-container {
+    text-align: center;
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
