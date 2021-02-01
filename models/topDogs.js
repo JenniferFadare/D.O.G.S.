@@ -10,7 +10,7 @@ TopDogs.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement,
+      autoIncrement: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -34,7 +34,7 @@ TopDogs.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "top_dogs",
+    modelName: "topDogs",
   }
 );
 

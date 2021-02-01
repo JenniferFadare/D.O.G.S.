@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.O.G.S</title>
+</head>
+<body>
+    <!-- navigation -->
+    <header>
+        <h1>
+            <a href="/" id="logo">D.O.G.S.</a>
+        </h1>
+        <nav>
+            <!--Unordered list element-->
+            <ul>
+                <!-- List item element -->
+                <li>
+                    {{#if loggedIn }}
+                    <a href="/dashboard">Dashboard</a>
+                    <a id="logout">Logout</a>
+                    <script defer src="/javascript/logout.js"></script>
+                    {{else}}
+                    <!-- Anchor element -->
+                    <a href="/login">Login</a>
+                    {{/if}}
+                </li>
+                {{#unless loggedIn}}
+                <li>
+                    <a href="#dog-facts">Dog Facts</a>
+                </li>
+                {{/unless}}
+                <li>
+                    <a href="#our-mission">Our Mission</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+            <main>
+                {{{ body }}}
+            </main>
+
+    <!-- footer -->
+    <footer>
+        <h2> &#128062 Made by Team 6.</h2>
+        <div>
+            &copy; 2021 D.O.G.S., Inc.
+        </div>
+    </footer>
+
+</body>
+
+</html>

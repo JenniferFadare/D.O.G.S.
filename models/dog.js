@@ -27,10 +27,17 @@ Dog.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    temperment: {
+    temperament: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "dog",
   }
 );
 
